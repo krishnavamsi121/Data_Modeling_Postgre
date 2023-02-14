@@ -41,7 +41,7 @@ def process_log_file(cur,filepath):
     t = pd.Series(df['ts'],index=df.index)
 
     #insert time data records
-    column_labels = ["timestamp","hour","day","weelofyear","month","year","weekday"]
+    column_labels = ["timestamp","hour","day","weekofyear","month","year","weekday"]
     time_data = []
     for data in t:
         time_data.append([data,data.hour,data.day,data.weekofyear,data.month,data.year,data.day_name()])
